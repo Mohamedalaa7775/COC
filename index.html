@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="هذا الموقع يقدم خدمات علاجية لمرضى الأمراض المزمنة مثل السكر والضغط وأمراض القلب ,
+ عن طريق تنظيم جرعات الأدوية للمريض , إنشاء تقارير دورية عن حالة المريض , مقالات تفصيلية حول الأمراض المزمنة لافادة حديثي الإصابة , حساب عدد الجرعات اليومية وفقا لنوع الأنسولين و عمر الشخص ووزنه.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>CodeOfCare</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="scss.scss">
+    <link rel="stylesheet" href="main.py">
+    <link rel="stylesheet" href="js.js">
+    <!----------------------- Firebase - scripts  --------------------->
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-storage-compat.js"></script>
+    <!----------------------------------------------------------------->
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Noto+Kufi+Arabic:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!--------------------------------------------------------->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyB7dOuq8_3wxBdRk46nmqEO03eunhCloYA",
+            authDomain: "code-of-care-f36aa.firebaseapp.com",
+            projectId: "code-of-care-f36aa",
+            storageBucket: "code-of-care-f36aa.firebasestorage.app",
+            messagingSenderId: "394517121944",
+            appId: "1:394517121944:web:4fadbce279af95e8c139ed",
+            measurementId: "G-JVNEYQM0F1"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        import { getdatabase, ref, child, get, set, update, remove } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js"
+        const dp = getdatabase();
+        //  define حط هنا كل الinputs الي عاوز تعملها
+        // put "id" of all inputs 
+
+
+
+
+        // Prevent zoom in and zoom out
+document.body.addEventListener('wheel', function(event) {
+    if (event.ctrlKey) {
+        event.preventDefault(); }});
+
+    </script>
+    <!------------------------------------------------------------------------------>
+</head>
+
+<body>
+
+    <script src="js.js"></script>
+
+
+
+
+
+    <!-------------------navbar --------------------->
+
+    <nav class="navbar">
+        <div class="head">
+            <a href="index.html">Code Of Care</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">الصفحة الرئيسية</a>
+            <li><a href="services.html">الخدمات</a></li>
+            <li><a href="Articals.html">المقالات</a></li>
+            <li><a href="about.html">من نحن؟</a></li>
+        </ul>
+
+    </nav>
+
+
+        <!-------------------- DNA-WAVES-BACKGROUND ---------------------->
+        <div class="material">
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            <div class="dna"></div>
+            </div>
+    <!-------------- Upper-body ------------------>
+    <div class="container-1">
+        <h1>HI! <span class="auto-type"></span></h1>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ["WE ARE HERE FOR YOU", "Tools for Diabetes", "Tools for Heart Stocks", "CODE OF CARE" , "Medical Chatbot"],
+            typeSpeed: 100,    // Slower typing speed
+            backSpeed: 50,    // Slower backspacing speed
+            backDelay: 1000,   // Delay before starting to backspace
+            startDelay: 500,   // Delay before starting typing
+            loop: true,        // Infinite loop
+            showCursor: true   // Display cursor
+        });
+    </script>
+    
+      <!------------------------ wav-background -------------------------->
+    <section>
+        <div class="wave wave-1"></div>
+        <div class="wave wave-2"></div>
+        <div class="wave wave-3"></div>
+        <div class="wave wave-4"></div>
+    </section>
+
+    <!-------------------Vector-Doctor--------------------------->
+
+
+
+
+
+    <!---------------------- Head --------------------->
+    <div class="Box-1">
+        <h1 class="box-head">اعرف انت مين ؟</h1>
+        <div class="injection">
+            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+            <lord-icon src="https://cdn.lordicon.com/fykqjbfl.json" trigger="hover"
+                colors="primary:#0074ee,secondary:#00caff" style="width:200px;height:200px">
+            </lord-icon>
+        </div>
+
+
+        <div class="boss-of-box">
+            <h2 class="box-head-2">السكري من النوع الأول : </h2>
+            <p class="box-paragraph-2">
+                مرض يصيب الجهاز المناعي فيعجز الجسم عن إنتاج الأنسولين ،وغالباً ما ُيشخص المرض في مرحلة الطفولة ويضطر
+                المصابون به لأخذ حقن
+                الأنسولين،
+
+
+            <h2 class="box-head-3">السكري من النوع الثاني :</h2>
+            <p class="box-paragraph-3">يعاني المصابون به من عدم إنتاج أو عدم استجابة خاليا الجسم لألنسولين كما ينبغي
+                ,النوع الأكثر شيوعاً ويصيب عادة البالغين في منتصف العمر أو كبار السن كميات كافية من الأنسولين.</p>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-------------- Aniamation - Snake --------->
+    <!-- <div class="container">
+        <div class="spinner"></div>
+    </div>
+    <script>
+        let spinItem = ""
+        for (let i = 0; i < 95; i++) {
+            spinItem += "<span style= ' --i: " + i + " '></span>"
+
+        }
+        document.querySelector('.spinner').innerHTML = spinItem;
+    </script> -->
+    <!------------------------- Card-box ------------------------------>
+    <div class="Card-box-section">
+        <h1 class="Tagroba-El5edma">تجربة الخدمة <span class="span-col">:</span></h1>
+        <div class="background-color-sheet">
+            <img src="brain (2).png" class="brain" alt="">
+            <img src="syringe.png" class="syringe" alt="">
+
+        </div>
+
+
+        <div class="project-card-1" id="D.L.I">
+
+            <div class="project-image-1">
+                <img src="imgs/ImageForArticle_975_16981278236522842.webp" width=100% height=100%></img>
+            </div>
+
+            <div class="project-info">
+                <strong class="project-title">
+                    <span>مرض السكرى </span>
+                </strong>
+            </div>
+
+            <div class="project-info">
+                <p class="project-category">حساب عدد جرعاتك من انسولينك اليومي مع الوجبات على حسب
+                    وزنك وعمرك ونوع الانسولين الذي تستخدمه ,وتوفير بدائل صحية لا تزيد من سكر الدم .
+                </p>
+            </div>
+            <div>
+                <button class="card-button">
+                    <a href="services.html" type="button">جرب الخدمة</a>
+                </button>
+            </div>
+
+
+        </div>
+
+
+        <!--------------- Atom ------------->
+        <div id="atom">
+            <div id="nucleus">
+            </div>
+            <div class="orbit">
+                <div class="electron"></div>
+            </div>
+            <div class="orbit">
+                <div class="electron"></div>
+            </div>
+            <div class="orbit">
+                <div class="electron"></div>
+            </div>
+        </div>
+
+
+        <!--------------- Atom ------------->
+
+
+
+
+        <!-------------------footer --------------------->
+
+        <footer class="footer">
+            <p>&copy; 2024 My Homepage. All rights reserved.</p>
+        </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-------------------------------------------------------------------->
+        <!-- Animated wavy background -->
+
+        <!-- <div class="page">
+    </div>
+    <div class="page-2">
+    </div>
+    <div class="page-3">
+    </div> -->
+
+</body>
+
+</html>

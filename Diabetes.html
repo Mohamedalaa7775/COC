@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+
+    <title>Diabetes</title>
+</head>
+<style>
+    body {
+        background-color: #080c14;
+        height: 200vh;
+    }
+
+
+    /*--------------------------------- Type-one --------------------------  */
+
+    .type-one-head {
+        position: relative;
+        width: 400px;
+        height: 75px;
+        background-color: #1e283b;
+        font-weight: bold;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        border-radius: 20px;
+        z-index: 1;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+        transform: translate(190%, 10px);
+    }
+
+    .type-one-head span {
+        color: #f76d0b;
+        font-weight: bold;
+        font-size: 20px;
+        transition: 0.3s;
+    }
+
+
+    .type-one-head span::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        /* background: #080c14; */
+        box-shadow: 0 0.5em 0 0px #889dc6, 0 0 #889dc6;
+        border: 1px solid #889dc6;
+        z-index: 1000;
+        transform: translate(0, .75em, -1em);
+    }
+
+
+    /*--------------------------------- return-bottom --------------------------  */
+
+    .return {
+        position: relative;
+        width: 191px;
+        height: 75px;
+        font-size: 40px;
+        background-color: #1e283b;
+        font-weight: bold;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        border-radius: 20px;
+        z-index: 1;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+        transform: translate(287%, -72px);
+    }
+
+    .return a {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .return a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 98%;
+        height: 98%;
+        border-radius: 20px;
+        box-shadow: 0 0.5em 0 0px #889dc6, 0 0 #889dc6;
+        border: 1px solid #889dc6;
+        z-index: 1000;
+        transform: translate(0, .75em, -1em);
+    }
+
+    .return i {
+        font-size: 40px;
+        color: #f76d0b;
+        transition: 0.3s;
+    }
+
+    .return i:hover {
+        font-size: 40px;
+        color: #889dc6;
+    }
+
+    .type-one-head:hover {
+        background-color: #344057;
+
+        span {
+            color: aliceblue;
+        }
+    }
+
+    .return:hover {
+        background-color: #344057;
+
+        i {
+            color: aliceblue;
+        }
+    }
+
+    .main-type-1 {
+        width: 98%;
+        height: 600px;
+        position: relative;
+        background-color: #101827;
+        margin-top: 60%;
+    }
+
+    /* ----------Box-of-types------------- */
+.Box-of-types {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    width: 80em;
+    height: 75px;
+    top: 80%;
+    margin: 20px auto;
+    left: -30px;
+}
+
+
+ /* --------------------------------------- */
+    input {
+        width: 170px;
+        border: 3px solid #0056b3;
+        font-size: 15px;
+        height: 40px;
+        border-radius: 7px;
+        outline: none;
+
+    }
+
+    .container {
+        max-width: 500px;
+        margin: 0 auto;
+        transform: translate(0px, 116px);
+    }
+
+    .container h1 {
+        text-align: center;
+        color: #ddd;
+    }
+
+    .form-group {
+        margin-bottom: 75px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+        position: relative;
+        left: -100%;
+    }
+
+    input[type="number"] {
+        width: 65%;
+        padding: 10px;
+        border: 2px solid #667683;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+        position: relative;
+        left: -100%;
+        color: #EEE;
+        background-color: #080c14;
+    }
+
+
+
+    input[type="number"]:focus {
+        border-color: #007bff;
+        border-width: 3px;
+        outline: none;
+    }
+
+    button {
+     width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transform: translate(50px, -1000%);
+}
+
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    .result-box {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 110px;
+    padding: 35px;
+    background-color: #080c14;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 17px;
+    color: #EEE;
+    font-size: 35px;
+    position: relative;
+    top: -150px;
+    left: 533px;
+    }
+    #calculateBtn {
+        transform:translate(70px,500%);
+        width: 300px;
+    }
+
+
+    /*--------------------------------- Glass-Container --------------------------  */
+    .container-of-inputs {
+        width: 1600px;
+        height: 1000px;
+        margin: -200px auto;
+        position: relative;
+        top: 30%;
+        /* background: linear-gradient(180deg, #1d2329, #080c14); */
+        background: linear-gradient(180deg, #1d2329, #06121f);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 22px 32px 0 rgba(0, 0, 0, 0.37);
+    }
+</style>
+
+
+
+
+
+
+
+
+<!---------------------------------------------------HTML-------------------------------------------->
+
+
+
+
+
+
+
+
+<body>
+    <div class="type-one-head">
+        <span>Types</span>
+    </div>
+    <div class="return">
+        <a href="services.html">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+
+    </div>
+
+    <div class="container-of-inputs">
+
+        <div class="Box-of-types">
+            <button>Type 1</button>
+            <button>Type 2</button>
+            <button>Type 3</button>
+        </div>
+        <div class="container">
+            <h1>Enter a number to calculate:</h1>
+            <input type="number" id="inputNumber" placeholder="Enter number" />
+            <button id="calculateBtn">Calculate</button>
+    
+            <!-- Result Boxes -->
+            <div class="result-box" id="resultBox1">
+                <span id="resultValue1"></span>
+                <span id="resultText1" style="display:none;">insulin-perday</span>  <!-- نص يظهر بعد الحساب -->
+            </div>
+            <div class="result-box" id="resultBox2">
+                <span id="resultValue2"></span>
+                <span id="resultText2" style="display:none;"><br>:1  (1 gram of carb)<br></span>  <!-- نص يظهر بعد الحساب -->
+            </div>
+
+    <!------------------------------------------ Chat Bot ----------------------------------------------->
+
+
+    <div class="chat-button" id="chat-button">
+        <img src="chat-icon.png" alt="Chat" />
+        <div class="chat-tooltip">نحن متواجدون! كيف يمكنني مساعدتك اليوم؟</div>
+    </div>
+    
+    <!-- نافذة الشات بوت -->
+    <div class="chat-window" id="chat-window">
+        <!-- الشات بوت الجاهز هنا -->
+            <!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+
+<style>
+    .chat-container {
+        width: 100%;
+        max-width: 400px;
+        height: 90vh;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .chat-header {
+        background-color: #0066cc;
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .chat-messages {
+        flex: 1;
+        overflow-y: auto;
+        padding: 10px;
+        background-color: #f9f9f9;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .chat-message {
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    .chat-message.user {
+        justify-content: flex-end;
+    }
+
+    .chat-message .message {
+        max-width: 70%;
+        padding: 10px;
+        border-radius: 15px;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .chat-message.bot .message {
+        background-color: #e9e9e9;
+        color: #333;
+        border-top-left-radius: 0;
+    }
+
+    .chat-message.user .message {
+        background-color: #0066cc;
+        color: #fff;
+        border-top-right-radius: 0;
+    }
+
+    .chat-input {
+        display: flex;
+        padding: 10px;
+        background-color: #fff;
+        border-top: 1px solid #ddd;
+    }
+
+    .chat-input input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .chat-input button {
+        background-color: #0066cc;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin-left: 10px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .chat-input button:hover {
+        background-color: #0055bb;
+    }
+
+    .language-select {
+        margin: 10px;
+        text-align: center;
+    }
+
+    .language-select select {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    #loading {
+        text-align: center;
+        color: #666;
+        font-size: 14px;
+        padding: 10px;
+        display: none;
+    }
+
+    .typing-indicator {
+        color: #666;
+        font-size: 12px;
+        padding: 5px 10px;
+        font-style: italic;
+    }
+        /*----------------------------Chatbot-button-style------------------------------  */
+    /* زر المحادثة */
+        .chat-button {
+            position: fixed;
+            bottom: -50%;
+            right: -85%;
+            background-color: #007bff;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+
+        .chat-button img {
+        width: 30px;
+        height: 30px;
+        }
+
+        .chat-button:hover {
+        transform: scale(1.1);
+        }
+
+        .chat-tooltip {
+        position: absolute;
+        bottom: 70px;
+        right: 0;
+        background-color: #fff;
+        color: #333;
+        padding: 8px 12px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: none;
+        }
+
+        .chat-button:hover .chat-tooltip {
+        display: block;
+        }
+
+        /* نافذة الشات بوت */
+        .chat-window {
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+        width: 350px;
+        height: 500px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        display: none;
+        flex-direction: column;
+        overflow: hidden;
+        }
+
+        .chat-header {
+        background-color: #007bff;
+        color: white;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+
+        .chat-header button {
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        }
+
+        .chat-content {
+        flex: 1;
+        overflow-y: auto;
+        padding: 10px;
+        }
+
+</style>
+</head>
+<body>
+<div class="chat-container">
+    <div class="chat-header">Code.of.Care bot</div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <div id="loading" class="typing-indicator">Typing...</div>
+    <div class="chat-input">
+        <input type="text" id="dataInput" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
+        <button onclick="sendData()">Send</button>
+    </div>
+    <div class="language-select">
+        <label for="languageSelect">Language: </label>
+        <select id="languageSelect" onchange="setLanguage()">
+            <option value="en">English</option>
+            <option value="ar">Arabic</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="es">Spanish</option>
+        
+        </select>
+    </div>
+</div>
+
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyCXk5smkYCRJEzgmpOfZNOu9XJ9gESGs9Q",
+        authDomain: "code-of-care-91123.firebaseapp.com",
+        databaseURL: "https://code-of-care-91123-default-rtdb.firebaseio.com",
+        projectId: "code-of-care-91123",
+        storageBucket: "code-of-care-91123.appspot.com",
+        messagingSenderId: "299229939272",
+        appId: "1:299229939272:web:a9d8142ef3f5bb57747a7d",
+        measurementId: "G-F94NTJRG85"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const database = firebase.database();
+
+    function showLoading(show) {
+        const loading = document.getElementById('loading');
+        loading.style.display = show ? 'block' : 'none';
+    }
+
+    function sendData() {
+        const dataInput = document.getElementById('dataInput');
+        const message = dataInput.value.trim();
+        if (!message) return;
+
+        appendMessage('user', message);
+        showLoading(true);
+        dataInput.value = '';
+
+        database.ref('comands/input').set(message)
+            .then(() => database.ref('comands/state').set(true))
+            .catch(error => console.error('Error:', error));
+    }
+
+    function handleKeyPress(event) {
+        if (event.key === 'Enter') {
+            sendData();
+        }
+    }
+
+    database.ref('comands/output').on('value', snapshot => {
+        const output = snapshot.val();
+        if (output) {
+            appendMessage('bot', output);
+            showLoading(false);
+        }
+    });
+
+    function setLanguage() {
+        const lang = document.getElementById('languageSelect').value;
+        database.ref('comands/lang').set(lang)
+            .catch(error => console.error('Error:', error));
+    }
+
+    function appendMessage(type, text) {
+        const chatMessages = document.getElementById('chatMessages');
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('chat-message', type);
+
+        const messageContent = document.createElement('div');
+        messageContent.classList.add('message');
+        messageContent.textContent = text;
+
+        messageDiv.appendChild(messageContent);
+        chatMessages.appendChild(messageDiv);
+
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+</script>
+        <!-- انسخ وألصق الكود الحالي للشات بوت داخل هذا الـ div -->
+        <div class="chat-header">
+        <span>الشات بوت</span>
+        <button id="close-chat">X</button>
+        </div>
+        <div class="chat-content">
+        <!-- انسخ كود الشات بوت الجاهز الخاص بك هنا -->
+        <!-- مثال: iframe أو أكواد HTML للشات بوت -->
+        </div>
+    </div>
+  
+
+
+
+
+
+
+
+
+        <script>
+            // الحصول على العناصر من الصفحة
+            const calculateBtn = document.getElementById('calculateBtn');
+            const resultBox1 = document.getElementById('resultBox1');
+            const resultBox2 = document.getElementById('resultBox2');
+    
+            // إضافة حدث عند الضغط على الزر
+            calculateBtn.addEventListener('click', function () {
+                // قراءة القيم من المدخلات
+                const inputValue = parseFloat(document.getElementById('inputNumber').value);
+    
+                // التحقق من صحة القيم
+                if (isNaN(inputValue) || inputValue === "") {
+                    resultBox1.textContent = "Please enter a valid number.";
+                    resultBox2.textContent = "Please enter a valid number.";
+                    return;
+                }
+    
+                // إجراء العملية الحسابية: (Input * 0.55) / 450
+                const result1 = inputValue * 0.55;  // ضرب المدخل في 0.55
+                const result2 = Math.round(450 / result1) ;      // قسم النتيجة على 450
+
+            // عرض النتيجة في الصندوق الأول
+            document.getElementById('resultValue1').textContent = result1.toFixed(0);
+            // عرض النص "per day" بعد النتيجة في الصندوق الأول
+            document.getElementById('resultText1').style.display = "inline";
+
+            // عرض النتيجة في الصندوق الثاني
+            document.getElementById('resultValue2').textContent = result2.toFixed(0);
+            // عرض النص "per day" بعد النتيجة في الصندوق الثاني
+            document.getElementById('resultText2').style.display = "inline";
+            });
+
+
+            // ------------------------------chatbot-button------------------------------------
+            // إظهار نافذة الشات بوت عند الضغط على الزر
+            document.getElementById("chat-button").addEventListener("click", function () {
+            document.getElementById("chat-window").style.display = "flex";
+            });
+
+            // إغلاق نافذة الشات بوت
+            document.getElementById("close-chat").addEventListener("click", function () {
+            document.getElementById("chat-window").style.display = "none";
+            });
+
+        </script>
+    
+
+
+
+
+
+        </form>
+
+ 
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
